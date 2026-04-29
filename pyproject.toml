@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codepulse"
+version = "1.0.0"
+description = "A beautiful CLI tool to analyze codebases and visualize stats in your terminal"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Yashwanth", email = "yashgfghdd@gmail.com"},
+]
+keywords = ["cli", "code-analysis", "developer-tools", "terminal", "rich"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "rich>=13.0",
+    "click>=8.0",
+    "pathspec>=0.11",
+]
+
+[project.urls]
+Homepage = "https://github.com/Asdfyash1/codepulse"
+Repository = "https://github.com/Asdfyash1/codepulse"
+Issues = "https://github.com/Asdfyash1/codepulse/issues"
+
+[project.scripts]
+codepulse = "codepulse.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["codepulse*"]
